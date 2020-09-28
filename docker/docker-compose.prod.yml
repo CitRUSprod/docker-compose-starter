@@ -1,0 +1,24 @@
+version: "3.3"
+
+services:
+    server:
+        container_name: server
+        build:
+            context: ../services/server
+            dockerfile: ./docker/Prod.Dockerfile
+            args:
+                NGINX_IMAGE: ${NGINX_IMAGE}
+        restart: always
+        ports:
+            - ${SERVER_PORT}:6600
+        depends_on:
+            - frontend
+    frontend:
+        container_name: frontend
+        build:
+            context: ../services/frontend
+            dockerfile: ./docker/Prod.Dockerfile
+            args:
+                NODE_IMAGE: ${NODE_IMAGE}
+        restart: always
+        entrypoint: yarn start
