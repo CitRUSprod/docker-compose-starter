@@ -3,26 +3,12 @@ version: "3.3"
 services:
     server:
         container_name: server
-        build:
-            context: ../services/server
-            dockerfile: ./docker/Dev.Dockerfile
-            args:
-                NGINX_IMAGE: ${NGINX_IMAGE}
+        image: ${NGINX_IMAGE}
         restart: always
+        network_mode: host
         ports:
             - ${SERVER_PORT}:6600
+        environment:
+            FRONTEND_HOST: localhost
         volumes:
-            - ../services/server:/etc/nginx/conf.d
-        depends_on:
-            - frontend
-    frontend:
-        container_name: frontend
-        build:
-            context: ../services/frontend
-            dockerfile: ./docker/Dev.Dockerfile
-            args:
-                NODE_IMAGE: ${NODE_IMAGE}
-        restart: always
-        volumes:
-            - ../services/frontend:/services/frontend
-        entrypoint: yarn dev
+            - ../services/server:/etc/nginx/templates

@@ -1,5 +1,5 @@
 *.log
 .dockerignore
 dist
-docker
+Dockerfile
 node_modules

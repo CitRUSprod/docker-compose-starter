@@ -1,7 +1,0 @@
-ARG NGINX_IMAGE
-
-FROM ${NGINX_IMAGE}
-
-WORKDIR /etc/nginx/conf.d
-
-COPY . .

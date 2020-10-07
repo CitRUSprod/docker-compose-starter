@@ -2,6 +2,6 @@ server {
     listen 6600;
 
     location / {
-        proxy_pass http://frontend:6601/;
+        proxy_pass http://${FRONTEND_HOST}:6601/;
     }
 }

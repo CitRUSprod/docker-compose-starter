@@ -1,9 +1,5 @@
 #!/bin/sh
 
 SCRIPTS_DIR=$(dirname $0)
-ROOT_DIR=$SCRIPTS_DIR/..
-DOCKER_CONFIGS_DIR=$ROOT_DIR/docker
 
-sh $SCRIPTS_DIR/copy-env
-. $ROOT_DIR/.env
-docker-compose -f $DOCKER_CONFIGS_DIR/docker-compose.prod.yml -p "$PROJECT_NAME"_prod "$@"
+sh $SCRIPTS_DIR/run-mode prod "$@"

@@ -1,0 +1,22 @@
+#!/bin/sh
+
+SCRIPTS_DIR=$(dirname $0)
+ROOT_DIR=$SCRIPTS_DIR/..
+DOCKER_CONFIGS_DIR=$ROOT_DIR/docker
+
+MODE=$1
+ALL_ARGS=($@)
+
+for INDEX in $(seq 1 $(expr $# - 1))
+do
+    if [ $INDEX == 1 ]
+    then
+        ARGS=${ALL_ARGS[INDEX]}
+    else
+        ARGS="$ARGS ${ALL_ARGS[INDEX]}"
+    fi
+done
+
+sh $SCRIPTS_DIR/copy-env
+. $ROOT_DIR/.env
+docker-compose -f $DOCKER_CONFIGS_DIR/docker-compose."$MODE".yml -p "$PROJECT_NAME"_"$MODE" $ARGS
