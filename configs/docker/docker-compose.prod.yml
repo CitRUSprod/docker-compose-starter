@@ -1,22 +1,22 @@
 version: "3.3"
 
 services:
-    server:
-        container_name: server
+    nginx:
+        container_name: nginx
         image: ${NGINX_IMAGE}
         restart: always
         ports:
-            - ${SERVER_PORT}:6600
+            - ${WEB_PORT}:6600
         environment:
             FRONTEND_HOST: frontend
         volumes:
-            - ../services/server:/etc/nginx/templates
+            - ../nginx:/etc/nginx/templates
         depends_on:
             - frontend
     frontend:
         container_name: frontend
         build:
-            context: ../services/frontend
+            context: ../../services/frontend
             args:
                 NODE_IMAGE: ${NODE_IMAGE}
         restart: always

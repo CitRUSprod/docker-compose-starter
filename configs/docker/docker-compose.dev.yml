@@ -1,14 +1,14 @@
 version: "3.3"
 
 services:
-    server:
-        container_name: server
+    nginx:
+        container_name: nginx
         image: ${NGINX_IMAGE}
         restart: always
         network_mode: host
         ports:
-            - ${SERVER_PORT}:6600
+            - ${WEB_PORT}:6600
         environment:
             FRONTEND_HOST: localhost
         volumes:
-            - ../services/server:/etc/nginx/templates
+            - ../nginx:/etc/nginx/templates
