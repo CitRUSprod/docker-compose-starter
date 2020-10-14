@@ -1,5 +1,5 @@
 #!/bin/sh
 
-SCRIPTS_DIR=$(dirname $0)
+SCRIPTS_DIR=$(dirname "$0")
 
-sh $SCRIPTS_DIR/run-mode prod "$@"
+sh "$SCRIPTS_DIR"/run-mode prod "$@"
