@@ -10,7 +10,7 @@
         "git:commit": "git-cz",
         "prettier": "prettier --check",
         "prettier:fix": "yarn prettier --write",
-        "prettier:all": "yarn prettier \"**/*.{html,json,yml,yaml,js}\"",
+        "prettier:all": "yarn prettier \"**/*.{html,md,json,yml,yaml,js}\"",
         "prettier:fix:all": "yarn prettier:all --write"
     },
     "config": {
@@ -28,7 +28,7 @@
         }
     },
     "lint-staged": {
-        "*.{html,json,yml,yaml,js}": "yarn prettier:fix"
+        "*.{html,md,json,yml,yaml,js}": "yarn prettier:fix"
     },
     "prettier": "./configs/prettier/index.js",
     "devDependencies": {
