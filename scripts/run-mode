@@ -8,6 +8,6 @@ MODE=$1
 
 shift
 
-sh "$SCRIPTS_DIR"/copy-env
+"$SCRIPTS_DIR"/copy-env
 . "$ROOT_DIR"/.env
 docker-compose -f "$DOCKER_CONFIGS_DIR"/docker-compose."$MODE".yml -p "$PROJECT_NAME"_"$MODE" "$@"

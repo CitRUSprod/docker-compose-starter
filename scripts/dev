@@ -2,4 +2,4 @@
 
 SCRIPTS_DIR=$(dirname "$0")
 
-sh "$SCRIPTS_DIR"/run-mode dev "$@"
+"$SCRIPTS_DIR"/run-mode dev "$@"
