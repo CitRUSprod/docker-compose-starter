@@ -1,5 +1,11 @@
+const path = require("path")
 const { merge } = require("webpack-merge")
 const NodemonPlugin = require("nodemon-webpack-plugin")
+const dotenv = require("dotenv")
+
+dotenv.config({
+    path: path.join(__dirname, "../../../.env")
+})
 
 const baseConfig = require("./base")
 
@@ -7,8 +13,7 @@ const devConfig = merge(baseConfig, {
     mode: "development",
     devtool: "inline-source-map",
     watch: true,
-    watchOptions: { poll: true },
-    plugins: [new NodemonPlugin({ legacyWatch: true })]
+    plugins: [new NodemonPlugin()]
 })
 
 const entry = Object.entries(devConfig.entry).reduce((acc, [key, value]) => {

@@ -20,4 +20,6 @@ services:
             args:
                 NODE_IMAGE: ${NODE_IMAGE}
         restart: always
+        environment:
+            PROJECT_NAME: ${PROJECT_NAME}
         entrypoint: yarn start
