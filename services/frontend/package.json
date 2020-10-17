@@ -1,8 +1,6 @@
 {
     "name": "frontend",
     "version": "0.0.0",
-    "author": "CitRUS",
-    "license": "MIT",
     "scripts": {
         "dev": "webpack --config ./webpack/dev.js",
         "prod": "webpack --config ./webpack/prod.js",
