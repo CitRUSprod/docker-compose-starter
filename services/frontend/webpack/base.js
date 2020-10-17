@@ -17,7 +17,10 @@ module.exports = {
         filename: "[name].js",
         path: paths.dist
     },
-    externals: [nodeExternals()],
+    externals: [
+        nodeExternals(),
+        nodeExternals({ modulesDir: "../../node_modules" })
+    ],
     stats: {
         all: false,
         version: false,
