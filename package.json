@@ -1,7 +1,5 @@
 {
     "name": "docker-compose-template",
-    "author": "CitRUS",
-    "license": "MIT",
     "private": true,
     "scripts": {
         "git:commit": "git-cz",
