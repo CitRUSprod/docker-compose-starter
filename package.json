@@ -3,15 +3,20 @@
     "author": "CitRUS",
     "license": "MIT",
     "private": true,
-    "workspaces": [
-        "services/*"
-    ],
     "scripts": {
         "git:commit": "git-cz",
+        "lerna:install": "lerna bootstrap",
         "prettier": "prettier --check",
         "prettier:fix": "yarn prettier --write",
         "prettier:all": "yarn prettier \"**/*.{html,md,json,yml,yaml,js}\"",
         "prettier:fix:all": "yarn prettier:all --write"
+    },
+    "lerna": {
+        "npmClient": "yarn",
+        "packages": [
+            "services/*"
+        ],
+        "version": "0.0.0"
     },
     "config": {
         "commitizen": {
@@ -36,6 +41,7 @@
         "commitizen": "4.2.1",
         "cz-customizable": "6.3.0",
         "husky": "4.3.0",
+        "lerna": "3.22.1",
         "lint-staged": "10.4.2",
         "prettier": "2.1.2"
     }
