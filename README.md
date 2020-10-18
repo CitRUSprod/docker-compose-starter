@@ -16,13 +16,7 @@ scripts/dev [docker-compose command]
 scripts/prod [docker-compose command]
 ```
 
-Run the project just enter this command and open http://localhost:6600 in your browser:
-
-```sh
-scripts/prod up -d
-```
-
-### Development mode
+### Development mode commands example
 
 ```sh
 scripts/dev up -d # Start
@@ -32,7 +26,7 @@ scripts/dev exec [service] sh # Enter the service container
 scripts/dev [docker-compose command] # Any docker-compose command
 ```
 
-### Production mode
+### Production mode commands example
 
 ```sh
 scripts/prod up -d # Start
@@ -45,3 +39,17 @@ scripts/prod [docker-compose command] # Any docker-compose command
 ### Settings
 
 All settings for docker-compose are written to a `.env` file.
+
+### Running
+
+```sh
+# Development
+scripts/dev up -d
+yarn && yarn lerna:install
+yarn lerna:run dev
+
+# Production
+scripts/prod up -d
+```
+
+Enter these commands and open http://localhost:6600 in your browser.
