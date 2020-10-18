@@ -16,7 +16,7 @@ scripts/dev [docker-compose command]
 scripts/prod [docker-compose command]
 ```
 
-Run the project just enter these command and open http://localhost:6600 in your browser:
+Run the project just enter these commands and open http://localhost:6600 in your browser:
 
 ```sh
 # Development
@@ -26,6 +26,12 @@ yarn lerna:run dev
 
 # Production
 scripts/prod up -d
+```
+
+Make a commit via commitizen:
+
+```sh
+yarn git:commit
 ```
 
 ### Development mode commands example
@@ -50,4 +56,8 @@ scripts/prod [docker-compose command] # Any docker-compose command
 
 ### Settings
 
-All settings for docker-compose are written to a `.env` file.
+All settings for docker-compose are written to a `.env` file. If it doesn't exist just enter these command:
+
+```sh
+scripts/copy-env
+```
