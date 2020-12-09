@@ -1,7 +1,7 @@
 language: node_js
 
 node_js:
-    - 14.13.1
+    - 15.3.0
 
 script:
     - yarn ci
