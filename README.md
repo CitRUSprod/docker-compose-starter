@@ -52,6 +52,12 @@ scripts/prod down # Stop
 scripts/prod logs [service] # View service logs
 scripts/prod exec [service] sh # Enter the service container
 scripts/prod [docker-compose command] # Any docker-compose command
+
+# or shortcuts
+
+scripts/start
+scripts/stop
+scripts/restart
 ```
 
 ### Settings
@@ -59,5 +65,5 @@ scripts/prod [docker-compose command] # Any docker-compose command
 All settings for docker-compose are written to a `.env` file. If it doesn't exist just enter these command:
 
 ```sh
-scripts/copy-env
+scripts/clone-env
 ```
