@@ -6,8 +6,6 @@ services:
         image: ${NGINX_IMAGE}
         restart: always
         network_mode: host
-        ports:
-            - ${WEB_PORT}:6600
         environment:
             FRONTEND_HOST: localhost
         volumes:
