@@ -4,12 +4,12 @@ const port = 6601
 
 const app = fastify()
 
-const projectName = process.env.PROJECT_NAME
-
 app.get("/", (request, reply) => {
     reply
         .type("text/html; charset=utf-8")
-        .send(`<h1>Docker Compose Template</h1><h2>${projectName}</h2>`)
+        .send(
+            `<h1>Docker Compose Template</h1><h2>docker-compose-template</h2>`
+        )
 })
 
 app.listen(port, "0.0.0.0", err => {
