@@ -4,12 +4,12 @@
     "scripts": {
         "git:commit": "git-cz",
         "prettier": "prettier --check",
-        "prettier:fix": "yarn prettier --write",
-        "prettier:all": "yarn prettier \"**/*.{html,md,json,yml,yaml,js}\"",
-        "prettier:fix:all": "yarn prettier:all --write",
-        "lint": "yarn prettier:all",
-        "lint:fix": "yarn prettier:fix:all",
-        "ci": "yarn lint"
+        "prettier:fix": "pnpm prettier -- --write",
+        "prettier:all": "pnpm prettier -- \"**/*.{html,md,json,yml,yaml,js}\"",
+        "prettier:fix:all": "pnpm prettier:all -- --write",
+        "lint": "pnpm prettier:all",
+        "lint:fix": "pnpm prettier:fix:all",
+        "ci": "pnpm lint"
     },
     "config": {
         "commitizen": {
@@ -26,7 +26,7 @@
         }
     },
     "lint-staged": {
-        "*.{html,md,json,yml,yaml,js}": "yarn prettier:fix"
+        "*.{html,md,json,yml,yaml,js}": "pnpm prettier:fix"
     },
     "prettier": "./configs/prettier/index.js",
     "devDependencies": {
