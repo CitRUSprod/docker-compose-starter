@@ -21,8 +21,8 @@ Run the project just enter these commands and open http://localhost:6600 in your
 ```sh
 # Development
 scripts/dev up -d
-yarn && yarn lerna:install
-yarn lerna:run dev
+pnpm i -r
+pnpm dev --parallel
 
 # Production
 scripts/prod up -d
@@ -31,7 +31,7 @@ scripts/prod up -d
 Make a commit via commitizen:
 
 ```sh
-yarn git:commit
+pnpm git:commit
 ```
 
 ### Development mode commands example

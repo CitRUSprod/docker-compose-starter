@@ -2,10 +2,12 @@ ARG NODE_IMAGE
 
 FROM ${NODE_IMAGE}
 
+RUN npm install -g pnpm
+
 WORKDIR /services/frontend
 
 COPY . .
 
-RUN yarn
+RUN pnpm i
 
-RUN yarn prod
+RUN pnpm prod
