@@ -13,4 +13,4 @@ services:
         extends:
             file: ./base.yml
             service: frontend
-        entrypoint: yarn start
+        entrypoint: pnpm start
