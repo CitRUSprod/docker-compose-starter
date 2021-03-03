@@ -5,7 +5,7 @@
 Create a new project based on this template using degit:
 
 ```sh
-npx degit CitRUSprod/docker-compose-template my-app
+pnpx degit CitRUSprod/docker-compose-template my-app
 cd my-app
 ```
 
