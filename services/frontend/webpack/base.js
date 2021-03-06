@@ -11,7 +11,7 @@ const paths = {
 module.exports = {
     target: "node",
     entry: {
-        app: path.join(paths.src, "app.js")
+        main: path.join(paths.src, "main.js")
     },
     output: {
         filename: "[name].js",

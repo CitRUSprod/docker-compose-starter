@@ -10,4 +10,4 @@ COPY . .
 
 RUN pnpm i
 
-RUN pnpm prod
+RUN pnpm build
