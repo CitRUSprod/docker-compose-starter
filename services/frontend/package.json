@@ -7,6 +7,7 @@
         "start": "node ./dist/main"
     },
     "devDependencies": {
+        "dotenv": "8.2.0",
         "esbuild": "0.8.56",
         "nodemon": "2.0.7",
         "source-map-support": "0.5.19"
