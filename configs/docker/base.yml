@@ -12,3 +12,4 @@ services:
             args:
                 NODE_IMAGE: node:15.3.0-alpine
         restart: always
+        entrypoint: pnpm start

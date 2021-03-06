@@ -13,4 +13,3 @@ services:
         extends:
             file: ./base.yml
             service: frontend
-        entrypoint: pnpm start
