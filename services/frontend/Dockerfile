@@ -2,7 +2,7 @@ ARG NODE_IMAGE
 
 FROM ${NODE_IMAGE}
 
-RUN npm install -g pnpm
+RUN npm i -g pnpm
 
 WORKDIR /services/frontend
 
