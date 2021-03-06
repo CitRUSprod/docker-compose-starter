@@ -9,16 +9,16 @@
     "devDependencies": {
         "clean-webpack-plugin": "3.0.0",
         "dotenv": "8.2.0",
-        "esbuild-loader": "2.4.0",
-        "nodemon-webpack-plugin": "4.3.2",
-        "prettier": "2.1.2",
+        "esbuild-loader": "2.9.2",
+        "nodemon-webpack-plugin": "4.4.4",
+        "prettier": "2.2.1",
         "source-map-support": "0.5.19",
-        "webpack": "4.44.2",
-        "webpack-cli": "3.3.12",
-        "webpack-merge": "5.2.0",
+        "webpack": "5.24.3",
+        "webpack-cli": "4.5.0",
+        "webpack-merge": "5.7.3",
         "webpack-node-externals": "2.5.2"
     },
     "dependencies": {
-        "fastify": "3.6.0"
+        "fastify": "3.13.0"
     }
 }
