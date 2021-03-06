@@ -1,7 +1,7 @@
 services:
     nginx:
         container_name: nginx
-        image: nginx:1.19.5-alpine
+        image: nginx:1.19.7-alpine
         restart: always
         volumes:
             - ../nginx:/etc/nginx/templates
@@ -10,6 +10,6 @@ services:
         build:
             context: ../../services/frontend
             args:
-                NODE_IMAGE: node:15.3.0-alpine
+                NODE_IMAGE: node:15.11.0-alpine
         restart: always
         entrypoint: pnpm start
