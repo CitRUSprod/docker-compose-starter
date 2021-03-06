@@ -7,6 +7,7 @@ function convertCommitTypes(typesObject = {}) {
         if (max < typeName.length) {
             return typeName.length
         }
+
         return max
     }, 0)
 
