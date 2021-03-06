@@ -13,7 +13,7 @@ before_install:
     - pnpm config set store-dir ~/.pnpm-store
 
 install:
-    - pnpm i
+    - pnpm i -r
 
 script:
     - pnpm ci
