@@ -1,6 +1,4 @@
-*.log
 .env
 .vscode
-/volumes
 dist
 node_modules
