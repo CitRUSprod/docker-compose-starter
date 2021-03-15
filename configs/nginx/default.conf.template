@@ -3,5 +3,7 @@ server {
 
     location / {
         proxy_pass http://${FRONTEND_HOST}:6601/;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
     }
 }
