@@ -1,13 +1,15 @@
 services:
     nginx:
-        image: nginx:1.19.7-alpine
+        image: nginx:1.21.1-alpine
         restart: always
+        environment:
+            WEBSITE_PORT: ${WEBSITE_PORT}
         volumes:
             - ../nginx:/etc/nginx/templates
-    frontend:
+    web-client:
         build:
-            context: ../../services/frontend
+            context: ../../services/web-client
             args:
-                NODE_IMAGE: node:15.11.0-alpine
+                NODE_IMAGE: node:16.4.2-alpine
         restart: always
         entrypoint: pnpm start

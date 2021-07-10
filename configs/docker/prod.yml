@@ -4,12 +4,12 @@ services:
             file: ./base.yml
             service: nginx
         ports:
-            - ${WEB_PORT}:6600
+            - ${WEBSITE_PORT}:${WEBSITE_PORT}
         environment:
-            FRONTEND_HOST: frontend
+            WEB_CLIENT_HOST: web-client
         depends_on:
-            - frontend
-    frontend:
+            - web-client
+    web-client:
         extends:
             file: ./base.yml
-            service: frontend
+            service: web-client

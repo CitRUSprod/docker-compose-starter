@@ -1,7 +1,7 @@
 language: node_js
 
 node_js:
-    - 15.11.0
+    - 16.4.2
 
 cache:
     npm: false
@@ -9,7 +9,7 @@ cache:
         - "~/.pnpm-store"
 
 before_install:
-    - curl -L https://unpkg.com/@pnpm/self-installer | node
+    - npm i -g pnpm
     - pnpm config set store-dir ~/.pnpm-store
 
 install:

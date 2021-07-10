@@ -5,4 +5,4 @@ services:
             service: nginx
         network_mode: host
         environment:
-            FRONTEND_HOST: localhost
+            WEB_CLIENT_HOST: localhost
