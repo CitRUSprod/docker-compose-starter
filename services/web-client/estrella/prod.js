@@ -9,4 +9,4 @@ const prodConfig = {
     }
 }
 
-estrella.build(defu(baseConfig, prodConfig))
+estrella.build(defu(prodConfig, baseConfig))
