@@ -1,7 +1,7 @@
 lockfileVersion: 5.3
 
 specifiers:
-  '@citrus-linting/eslint-config': 0.16.0
+  '@citrus-linting/eslint-config': 0.16.1
   '@citrus-linting/prettier-config': 0.2.0
   '@commitlint/cli': 12.1.4
   '@typescript-eslint/eslint-plugin': 4.28.4
@@ -12,13 +12,13 @@ specifiers:
   eslint-config-prettier: 8.3.0
   husky: 7.0.1
   inquirer: 8.1.2
-  lint-staged: 11.0.1
+  lint-staged: 11.1.0
   prettier: 2.3.2
   prettier-plugin-packagejson: 2.2.11
   typescript: 4.3.5
 
 devDependencies:
-  '@citrus-linting/eslint-config': 0.16.0
+  '@citrus-linting/eslint-config': 0.16.1
   '@citrus-linting/prettier-config': 0.2.0
   '@commitlint/cli': 12.1.4
   '@typescript-eslint/eslint-plugin': 4.28.4_b1648df9f9ba40bdeef3710a5a5af353
@@ -29,7 +29,7 @@ devDependencies:
   eslint-config-prettier: 8.3.0_eslint@7.31.0
   husky: 7.0.1
   inquirer: 8.1.2
-  lint-staged: 11.0.1
+  lint-staged: 11.1.0
   prettier: 2.3.2
   prettier-plugin-packagejson: 2.2.11_prettier@2.3.2
   typescript: 4.3.5
@@ -62,8 +62,8 @@ packages:
       js-tokens: 4.0.0
     dev: true
 
-  /@citrus-linting/eslint-config/0.16.0:
-    resolution: {integrity: sha512-SA3X9OrkAZp8uYaQRh40AkZpJa/vpHZlfRf+6LE3WoCKcAztz8JHV4pOpr0Ej3hun5Nd4fmurcJnGgv0aVfPVA==}
+  /@citrus-linting/eslint-config/0.16.1:
+    resolution: {integrity: sha512-NIXmd1p6zMeFhfw6iygd0pIhARQKL7LJb8c/B8zxDNIaINX/Aeos0A3Ume8kcpLbN78G4Q/kjec7qCWKjtUxzQ==}
     dev: true
 
   /@citrus-linting/prettier-config/0.2.0:
@@ -1659,8 +1659,8 @@ packages:
     resolution: {integrity: sha1-HADHQ7QzzQpOgHWPe2SldEDZ/wA=}
     dev: true
 
-  /lint-staged/11.0.1:
-    resolution: {integrity: sha512-RkTA1ulE6jAGFskxpGAwxfVRXjHp7D9gFg/+KMARUWMPiVFP0t28Em2u0gL8sA0w3/ck3TC57F2v2RNeQ5XPnw==}
+  /lint-staged/11.1.0:
+    resolution: {integrity: sha512-pzwEf+NKbTauAlk7gPPwTfulRXESEPZCSFXYfg20F220UOObebxu5uL5mkr9csQLNOM2Ydfrt3DJXakzAL7aaQ==}
     hasBin: true
     dependencies:
       chalk: 4.1.1

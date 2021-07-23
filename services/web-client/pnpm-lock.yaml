@@ -1,22 +1,22 @@
 lockfileVersion: 5.3
 
 specifiers:
-  '@types/node': 16.4.0
+  '@types/node': 16.4.1
   defu: 5.0.0
   dotenv: 10.0.0
   esbuild-node-externals: 1.3.0
   esbuild-plugin-clean: 0.1.3
   estrella: 1.4.1
-  fastify: 3.19.1
+  fastify: 3.19.2
   source-map-support: 0.5.19
   type-fest: 1.2.2
   typescript: 4.3.5
 
 dependencies:
-  fastify: 3.19.1
+  fastify: 3.19.2
 
 devDependencies:
-  '@types/node': 16.4.0
+  '@types/node': 16.4.1
   defu: 5.0.0
   dotenv: 10.0.0
   esbuild-node-externals: 1.3.0
@@ -55,8 +55,8 @@ packages:
       fastq: 1.11.1
     dev: true
 
-  /@types/node/16.4.0:
-    resolution: {integrity: sha512-HrJuE7Mlqcjj+00JqMWpZ3tY8w7EUd+S0U3L1+PQSWiXZbOgyQDvi+ogoUxaHApPJq5diKxYBQwA3iIlNcPqOg==}
+  /@types/node/16.4.1:
+    resolution: {integrity: sha512-UW7cbLqf/Wu5XH2RKKY1cHwUNLicIDRLMraYKz+HHAerJ0ZffUEk+fMnd8qU2JaS6cAy0r8tsaf7yqHASf/Y0Q==}
     dev: true
 
   /abstract-logging/2.0.1:
@@ -298,8 +298,8 @@ packages:
     resolution: {integrity: sha512-s1EQguBw/9qtc1p/WTY4eq9WMRIACkj+HTcOIK1in4MV5aFaQC9ZCIt0dJ7pr5bIf4lPpHvAtP2ywpTNgs7hqw==}
     dev: false
 
-  /fastify/3.19.1:
-    resolution: {integrity: sha512-vyoRO/TQ+ta3OKShx5CHZ2qXXUXzBG4ZOVB0AEKlmf+DoMmP0ftuaEnzc7DPLVXtRYZ1A3Tbcn/6ja5e+sa2lw==}
+  /fastify/3.19.2:
+    resolution: {integrity: sha512-s9naCdC0V1ynEzxMoe/0oX8XgcLk90VAnIms4z6KcF7Rpn1XiguoMyZSviTmv1x5rgy/OjGGBM45sNpMoBzCUQ==}
     dependencies:
       '@fastify/ajv-compiler': 1.1.0
       abstract-logging: 2.0.1
@@ -310,7 +310,7 @@ packages:
       find-my-way: 4.3.2
       flatstr: 1.0.12
       light-my-request: 4.4.1
-      pino: 6.12.0
+      pino: 6.13.0
       proxy-addr: 2.0.7
       readable-stream: 3.6.0
       rfdc: 1.3.0
@@ -564,8 +564,8 @@ packages:
     resolution: {integrity: sha512-EqX4pwDPrt3MuOAAUBMU0Tk5kR/YcCM5fNPEzgCO2zJ5HfX0vbiH9HbJglnyeQsN96Kznae6MWD47pZB5avTrg==}
     dev: false
 
-  /pino/6.12.0:
-    resolution: {integrity: sha512-5NGopOcUusGuklGHVVv9az0Hv/Dj3urHhD3G+zhl5pBGIRYAeGCi/Ej6YCl16Q2ko28cmYiJz+/qRoJiwy62Rw==}
+  /pino/6.13.0:
+    resolution: {integrity: sha512-mRXSTfa34tbfrWqCIp1sUpZLqBhcoaGapoyxfEwaWwJGMpLijlRdDKIQUyvq4M3DUfFH5vEglwSw8POZYwbThA==}
     hasBin: true
     dependencies:
       fast-redact: 3.0.1
