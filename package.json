@@ -4,22 +4,17 @@
     "scripts": {
         "git:commit": "git-cz",
         "validate": "pnpm validate --parallel",
-        "prettier": "prettier --check",
-        "prettier:fix": "pnpm prettier -- --write",
-        "prettier:all": "pnpm prettier -- \"**/*.{md,json,yml,js,ts}\" \"!volumes\"",
-        "prettier:fix:all": "pnpm prettier:all -- --write",
         "eslint": "eslint --color",
         "eslint:fix": "pnpm eslint -- --fix",
-        "eslint:all": "pnpm eslint -- \"**/*.{js,ts}\"",
+        "eslint:all": "pnpm eslint -- \"**/*.{md,json,y?(a)ml,js,ts}\"",
         "eslint:fix:all": "pnpm eslint:all -- --fix",
-        "lint": "pnpm prettier:all && pnpm eslint:all",
-        "format": "pnpm prettier:fix:all && pnpm eslint:fix:all",
+        "lint": "pnpm eslint:all",
+        "format": "pnpm eslint:fix:all",
         "ci": "pnpm validate && pnpm lint",
         "prepare": "husky install"
     },
     "lint-staged": {
-        "*.{md,json,yml,js,ts}": "pnpm prettier:fix",
-        "*.{js,ts}": "pnpm eslint:fix"
+        "*.{md,json,y?(a)ml,js,ts}": "pnpm eslint:fix"
     },
     "config": {
         "commitizen": {
@@ -31,18 +26,28 @@
     },
     "prettier": "./configs/prettier/index.js",
     "eslintConfig": {
-        "extends": "./configs/eslint/index.js"
+        "extends": "./configs/eslint/index.js",
+        "ignorePatterns": [
+            "!.travis.yml",
+            "/volumes",
+            "dist",
+            "pnpm-lock.yaml"
+        ]
     },
     "devDependencies": {
         "@citrus-linting/eslint-config": "0.17.1",
         "@citrus-linting/prettier-config": "0.3.0",
         "@commitlint/cli": "13.1.0",
+        "@types/eslint": "7.28.0",
+        "@types/prettier": "2.3.2",
         "@typescript-eslint/eslint-plugin": "4.29.2",
         "@typescript-eslint/parser": "4.29.2",
+        "any-eslint-parser": "1.0.1",
         "commitizen": "4.2.4",
         "cz-customizable": "6.3.0",
         "eslint": "7.32.0",
         "eslint-config-prettier": "8.3.0",
+        "eslint-plugin-prettier": "3.4.1",
         "husky": "7.0.1",
         "lint-staged": "11.1.2",
         "prettier": "2.3.2",
