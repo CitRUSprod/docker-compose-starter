@@ -6,9 +6,9 @@ services:
             WEBSITE_PORT: ${WEBSITE_PORT}
         volumes:
             - ../nginx:/etc/nginx/templates
-    web-client:
+    web:
         build:
-            context: ../../services/web-client
+            context: ../../services/web
             args:
                 NODE_IMAGE: node:16.4.2-alpine
         restart: always
