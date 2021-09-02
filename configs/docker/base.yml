@@ -10,5 +10,5 @@ services:
         build:
             context: ../../services/web
             args:
-                NODE_IMAGE: node:16.4.2-alpine
+                NODE_IMAGE: node:16.8.0-alpine
         restart: always
