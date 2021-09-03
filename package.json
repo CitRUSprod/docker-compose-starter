@@ -13,9 +13,6 @@
         "ci": "pnpm validate && pnpm lint",
         "prepare": "husky install"
     },
-    "lint-staged": {
-        "*.{md,json,y?(a)ml,js,ts}": "pnpm eslint:fix"
-    },
     "config": {
         "commitizen": {
             "path": "cz-customizable"
@@ -23,6 +20,9 @@
         "cz-customizable": {
             "config": "./configs/commits/commitizen.js"
         }
+    },
+    "lint-staged": {
+        "*.{md,json,y?(a)ml,js,ts}": "pnpm eslint:fix"
     },
     "prettier": "./configs/prettier/index.js",
     "eslintConfig": {
