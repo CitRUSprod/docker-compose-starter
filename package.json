@@ -2,8 +2,8 @@
     "name": "docker-compose-template",
     "private": true,
     "scripts": {
-        "git:commit": "git-cz",
         "validate": "pnpm validate --parallel",
+        "git:commit": "git-cz",
         "eslint": "eslint --color",
         "eslint:fix": "pnpm eslint -- --fix",
         "eslint:all": "pnpm eslint -- \"**/*.{md,json,y?(a)ml,js,ts}\"",
