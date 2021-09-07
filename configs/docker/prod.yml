@@ -13,3 +13,5 @@ services:
         extends:
             file: ./base.yml
             service: web
+        environment:
+            WEBSITE_PORT: ${WEBSITE_PORT}
