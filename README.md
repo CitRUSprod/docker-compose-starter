@@ -2,9 +2,9 @@
 
 ### Get started
 
-> **NOTE:** Before using this template, you need to install `pnpm` (only for development), `docker` and `docker-compose`.
+> **NOTE:** Before using this template, you need to install `pnpm` (only for development), `docker` and `docker compose`.
 
-Create a new project based on this template using degit:
+Create a new project based on this template using `degit`:
 
 ```sh
 pnpx degit CitRUSprod/docker-compose-starter my-app
@@ -12,11 +12,11 @@ cd my-app
 pnpm i
 ```
 
-The launch is done through docker-compose, but with scripts `scripts/dev` and `scripts/prod`:
+The launch is done through `docker compose`, but with scripts `scripts/dev` and `scripts/prod`:
 
 ```sh
-scripts/dev [docker-compose command]
-scripts/prod [docker-compose command]
+scripts/dev [docker compose command]
+scripts/prod [docker compose command]
 ```
 
 Run the project by entering these commands and open http://localhost:6600 in your browser:
@@ -37,7 +37,7 @@ scripts/dev up -d # Start
 scripts/dev down # Stop
 scripts/dev logs [service] # View service logs
 scripts/dev exec [service] sh # Enter the service container
-scripts/dev [docker-compose command] # Any docker-compose command
+scripts/dev [docker compose command] # Any docker compose command
 ```
 
 ### Example of production mode commands
@@ -47,7 +47,7 @@ scripts/prod up -d # Start
 scripts/prod down # Stop
 scripts/prod logs [service] # View service logs
 scripts/prod exec [service] sh # Enter the service container
-scripts/prod [docker-compose command] # Any docker-compose command
+scripts/prod [docker compose command] # Any docker compose command
 
 # or shortcuts
 
