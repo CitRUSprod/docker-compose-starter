@@ -1,9 +1,9 @@
 {
-    "name": "docker-compose-template",
+    "name": "docker-compose-starter",
     "private": true,
     "scripts": {
         "validate": "pnpm validate --parallel",
-        "git:commit": "git-cz",
+        "commit": "git-cz",
         "eslint": "eslint --color",
         "eslint:fix": "pnpm eslint -- --fix",
         "eslint:all": "pnpm eslint -- \"**/*.{md,json,y?(a)ml,js,ts}\"",
@@ -12,6 +12,10 @@
         "format": "pnpm eslint:fix:all",
         "ci": "pnpm validate && pnpm lint",
         "prepare": "husky install"
+    },
+    "engines": {
+        "node": ">=17",
+        "pnpm": ">=6"
     },
     "config": {
         "commitizen": {
@@ -35,22 +39,22 @@
         ]
     },
     "devDependencies": {
-        "@citrus-linting/eslint-config": "0.17.1",
-        "@citrus-linting/prettier-config": "0.3.0",
-        "@commitlint/cli": "13.1.0",
-        "@types/eslint": "7.28.0",
-        "@types/prettier": "2.3.2",
-        "@typescript-eslint/eslint-plugin": "4.30.0",
-        "@typescript-eslint/parser": "4.30.0",
+        "@citrus-linting/eslint-config": "0.18.2",
+        "@citrus-linting/prettier-config": "0.5.0",
+        "@commitlint/cli": "16.2.3",
+        "@types/eslint": "8.4.1",
+        "@types/prettier": "2.6.0",
+        "@typescript-eslint/eslint-plugin": "5.19.0",
+        "@typescript-eslint/parser": "5.19.0",
         "any-eslint-parser": "1.0.1",
         "commitizen": "4.2.4",
         "cz-customizable": "6.3.0",
-        "eslint": "7.32.0",
-        "eslint-config-prettier": "8.3.0",
+        "eslint": "8.13.0",
+        "eslint-config-prettier": "8.5.0",
         "eslint-plugin-prettier": "4.0.0",
-        "husky": "7.0.2",
-        "lint-staged": "11.1.2",
-        "prettier": "2.3.2",
-        "typescript": "4.4.2"
+        "husky": "7.0.4",
+        "lint-staged": "12.3.7",
+        "prettier": "2.6.2",
+        "typescript": "4.6.3"
     }
 }

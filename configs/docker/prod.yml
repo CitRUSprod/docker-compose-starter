@@ -3,15 +3,11 @@ services:
         extends:
             file: ./base.yml
             service: nginx
-        ports:
-            - ${WEBSITE_PORT}:${WEBSITE_PORT}
         environment:
-            WEB_HOST: web
+            API_HOST: api
         depends_on:
-            - web
-    web:
+            - api
+    api:
         extends:
             file: ./base.yml
-            service: web
-        environment:
-            WEBSITE_PORT: ${WEBSITE_PORT}
+            service: api

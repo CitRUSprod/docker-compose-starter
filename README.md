@@ -1,4 +1,4 @@
-# Docker Compose Template
+# Docker Compose Starter
 
 ### Get started
 
@@ -7,36 +7,30 @@
 Create a new project based on this template using degit:
 
 ```sh
-pnpx degit CitRUSprod/docker-compose-template my-app
+pnpx degit CitRUSprod/docker-compose-starter my-app
 cd my-app
+pnpm i
 ```
 
-The launch is done through docker-compose, but via scripts `scripts/dev` and `scripts/prod`:
+The launch is done through docker-compose, but with scripts `scripts/dev` and `scripts/prod`:
 
 ```sh
 scripts/dev [docker-compose command]
 scripts/prod [docker-compose command]
 ```
 
-Run the project just enter these commands and open http://localhost:6600 in your browser:
+Run the project by entering these commands and open http://localhost:6600 in your browser:
 
 ```sh
 # Development
 scripts/dev up -d
-pnpm i
-pnpm dev --parallel
+pnpm dev --parallel # or "cd services/[service]" and "pnpm dev"
 
 # Production
 scripts/start
 ```
 
-Make a commit via commitizen:
-
-```sh
-pnpm git:commit
-```
-
-### Development mode commands example
+### Example of development mode commands
 
 ```sh
 scripts/dev up -d # Start
@@ -46,7 +40,7 @@ scripts/dev exec [service] sh # Enter the service container
 scripts/dev [docker-compose command] # Any docker-compose command
 ```
 
-### Production mode commands example
+### Example of production mode commands
 
 ```sh
 scripts/prod up -d # Start
@@ -62,9 +56,35 @@ scripts/stop # Stop
 scripts/restart # Restart
 ```
 
-### Settings
+### Tools
 
-All settings for docker-compose are written to a `.env` file. If it doesn't exist just enter these command:
+Commit with `commitizen`:
+
+```sh
+pnpm commit
+```
+
+Check types with `tsc`:
+
+```sh
+pnpm validate
+```
+
+Lint with linters:
+
+```sh
+pnpm lint
+```
+
+Format with formatters:
+
+```sh
+pnpm format
+```
+
+### Environment variables
+
+All environment variables are written to the `.env` file. If it doesn't exist, just enter this command:
 
 ```sh
 scripts/clone-env

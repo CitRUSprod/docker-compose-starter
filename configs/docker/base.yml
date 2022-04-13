@@ -1,14 +1,16 @@
 services:
     nginx:
-        image: nginx:1.21.1-alpine
+        image: nginx:1.21.6-alpine
         restart: always
-        environment:
-            WEBSITE_PORT: ${WEBSITE_PORT}
+        ports:
+            - ${WEB_PORT}:6600
         volumes:
             - ../nginx:/etc/nginx/templates
-    web:
+    api:
         build:
-            context: ../../services/web
+            context: ../../services/api
             args:
-                NODE_IMAGE: node:16.8.0-alpine
+                NODE_IMAGE: node:17.9.0-alpine
         restart: always
+        environment:
+            MESSAGE: ${MESSAGE}
