@@ -17,7 +17,6 @@ specifiers:
   typescript: 4.6.3
 
 dependencies:
-  dotenv: 16.0.0
   fastify: 3.28.0
   tslib: 2.3.1
 
@@ -26,6 +25,7 @@ devDependencies:
   '@types/node': 17.0.23
   concurrently: 7.1.0
   defu: 6.0.0
+  dotenv: 16.0.0
   esbuild: 0.14.34
   esbuild-plugin-clean: 0.9.0_esbuild@0.14.34
   esbuild-plugin-decorator: 0.4.0_c23c149b1648ac807e7797a342b4d65d
@@ -412,7 +412,7 @@ packages:
   /dotenv/16.0.0:
     resolution: {integrity: sha512-qD9WU0MPM4SWLPJy/r2Be+2WgQj8plChsyrCNQzW/0WjvcJQiKQJ9mH3ZgB3fxbUUxgc/11ZJ0Fi5KiimWGz2Q==}
     engines: {node: '>=12'}
-    dev: false
+    dev: true
 
   /emoji-regex/8.0.0:
     resolution: {integrity: sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==}
