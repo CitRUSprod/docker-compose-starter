@@ -10,7 +10,7 @@ services:
         build:
             context: ../../services/api
             args:
-                NODE_IMAGE: node:17.9.0-alpine
+                NODE_IMAGE: node:18.1.0-alpine
         restart: always
         environment:
             MESSAGE: ${MESSAGE}

@@ -4,14 +4,14 @@
     "scripts": {
         "dev": "concurrently -k -n b,v -c blue,magenta -p [{name}] pnpm:dev:build pnpm:dev:validate",
         "dev:build": "node esbuild/dev",
-        "dev:validate": "pnpm validate -- -w --preserveWatchOutput",
+        "dev:validate": "pnpm validate -w --preserveWatchOutput",
         "build": "node esbuild/prod",
         "start": "node dist/main",
         "validate": "tsc --pretty --noEmit"
     },
     "engines": {
-        "node": ">=17",
-        "pnpm": ">=6"
+        "node": ">=18",
+        "pnpm": ">=7"
     },
     "devDependencies": {
         "@swc/core": "1.2.165",

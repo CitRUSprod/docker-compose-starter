@@ -2,20 +2,20 @@
     "name": "docker-compose-starter",
     "private": true,
     "scripts": {
-        "validate": "pnpm validate --parallel",
+        "validate": "pnpm --parallel validate",
         "commit": "git-cz",
         "eslint": "eslint --color",
-        "eslint:fix": "pnpm eslint -- --fix",
-        "eslint:all": "pnpm eslint -- \"**/*.{md,json,y?(a)ml,js,ts}\"",
-        "eslint:fix:all": "pnpm eslint:all -- --fix",
+        "eslint:fix": "pnpm eslint --fix",
+        "eslint:all": "pnpm eslint \"**/*.{md,json,y?(a)ml,js,ts}\"",
+        "eslint:fix:all": "pnpm eslint:all --fix",
         "lint": "pnpm eslint:all",
         "format": "pnpm eslint:fix:all",
         "ci": "pnpm validate && pnpm lint",
         "prepare": "husky install"
     },
     "engines": {
-        "node": ">=17",
-        "pnpm": ">=6"
+        "node": ">=18",
+        "pnpm": ">=7"
     },
     "config": {
         "commitizen": {

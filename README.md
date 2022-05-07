@@ -24,7 +24,7 @@ Run the project by entering these commands and open http://localhost:6600 in you
 ```sh
 # Development
 scripts/dev up -d
-pnpm dev --parallel # or "cd services/[service]" and "pnpm dev"
+pnpm --parallel dev # or "cd services/[service]" and "pnpm dev"
 
 # Production
 scripts/start

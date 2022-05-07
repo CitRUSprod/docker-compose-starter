@@ -1,7 +1,7 @@
 language: node_js
 
 node_js:
-    - 17.9.0
+    - 18.1.0
 
 cache:
     npm: false
@@ -14,7 +14,7 @@ before_install:
 
 install:
     - pnpm i
-    - pnpm build --parallel
+    - pnpm --parallel build
 
 script:
     - pnpm ci
