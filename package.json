@@ -33,7 +33,7 @@
         "extends": "./configs/eslint/index.js",
         "ignorePatterns": [
             "!.travis.yml",
-            "/volumes",
+            "/storage",
             "dist",
             "pnpm-lock.yaml"
         ]
