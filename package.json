@@ -4,7 +4,7 @@
     "scripts": {
         "validate": "pnpm --parallel validate",
         "commit": "git-cz",
-        "eslint": "eslint --color",
+        "eslint": "eslint --color --no-error-on-unmatched-pattern",
         "eslint:fix": "pnpm eslint --fix",
         "eslint:all": "pnpm eslint \"**/*.{md,json,y?(a)ml,js,ts}\"",
         "eslint:fix:all": "pnpm eslint:all --fix",
