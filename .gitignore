@@ -1,6 +1,13 @@
-.env
 .vscode
+
 *.log
-/storage
-dist
+
+.env
+
 node_modules
+.turbo
+out
+dist
+
+/storage/*
+!/storage/.gitkeep

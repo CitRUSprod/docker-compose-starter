@@ -1,4 +1,5 @@
 import fastify from "fastify"
+import { random } from "@local/utils"
 
 const port = 6601
 
@@ -9,10 +10,17 @@ const app = fastify()
 
 app.get("/", async () => ({
     nodeEnv,
-    message
+    message,
+    random: random.getInt(1, 100)
 }))
 
-app.listen(port, "0.0.0.0", err => {
-    if (err) throw err
+async function start() {
+    await app.ready()
+    await app.listen({
+        host: "0.0.0.0",
+        port
+    })
     console.log(`Running on http://localhost:${port}`)
-})
+}
+
+start()

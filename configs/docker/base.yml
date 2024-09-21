@@ -1,16 +1,18 @@
 services:
     nginx:
-        image: nginx:1.21.6-alpine
+        image: nginx:1.25.5-alpine
         restart: always
         ports:
-            - ${WEB_PORT}:6600
+            - ${WEBSITE_PORT}:6600
         volumes:
             - ../nginx:/etc/nginx/templates
     api:
         build:
-            context: ../../services/api
+            context: ../..
+            dockerfile: configs/docker/Dockerfile
+            target: api
             args:
-                NODE_IMAGE: node:18.1.0-alpine
+                NODE_IMAGE: node:20.12.2-alpine
         restart: always
         environment:
             MESSAGE: ${MESSAGE}
