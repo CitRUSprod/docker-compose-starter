@@ -14,13 +14,11 @@ app.get("/", async () => ({
     random: random.getInt(1, 100)
 }))
 
-async function start() {
-    await app.ready()
-    await app.listen({
-        host: "0.0.0.0",
-        port
-    })
-    console.log(`Running on http://localhost:${port}`)
-}
+await app.ready()
 
-start()
+await app.listen({
+    host: "0.0.0.0",
+    port
+})
+
+console.log(`Running on http://localhost:${port}`)
