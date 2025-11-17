@@ -1,5 +1,5 @@
+import { random } from "@repo/utils"
 import fastify from "fastify"
-import { random } from "@local/utils"
 
 const port = 6601
 

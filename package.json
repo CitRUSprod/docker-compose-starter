@@ -1,6 +1,7 @@
 {
     "name": "docker-compose-starter",
     "private": true,
+    "type": "module",
     "scripts": {
         "turbo": "turbo --no-daemon",
         "dev": "pnpm turbo dev",
@@ -16,47 +17,42 @@
         "validate": "pnpm check-types && pnpm lint",
         "prepare": "husky"
     },
+    "packageManager": "pnpm@10.22.0",
     "engines": {
-        "node": "20.12.2",
-        "pnpm": "9.0.6"
+        "node": "22.19.0",
+        "pnpm": "10.22.0"
     },
     "config": {
         "commitizen": {
             "path": "cz-customizable"
         },
         "cz-customizable": {
-            "config": "./configs/commits/commitizen.js"
+            "config": "./configs/commits/commitizen.cjs"
         }
     },
     "lint-staged": {
         "*.{md,json,y?(a)ml,js,ts}": "pnpm eslint:fix"
     },
-    "prettier": "./configs/prettier/index.js",
-    "eslintConfig": {
-        "extends": "./configs/eslint/index.js",
-        "ignorePatterns": [
-            "pnpm-lock.yaml",
-            "dist",
-            "/storage"
-        ]
-    },
     "devDependencies": {
-        "@citrus-linting/eslint-config": "0.22.0",
-        "@citrus-linting/prettier-config": "0.6.0",
-        "@commitlint/cli": "19.5.0",
-        "@local/configs": "workspace:*",
-        "@typescript-eslint/eslint-plugin": "7.18.0",
-        "@typescript-eslint/parser": "7.18.0",
+        "@citrus-linting/eslint-config": "1.3.1",
+        "@citrus-linting/prettier-config": "1.0.1",
+        "@commitlint/cli": "20.1.0",
+        "@commitlint/types": "20.0.0",
+        "@repo/configs": "workspace:*",
+        "@stylistic/eslint-plugin": "5.5.0",
         "any-eslint-parser": "1.0.1",
-        "commitizen": "4.3.0",
-        "cz-customizable": "7.2.1",
-        "eslint": "8.57.1",
-        "eslint-config-prettier": "9.1.0",
-        "eslint-plugin-prettier": "5.2.1",
-        "husky": "9.1.6",
-        "lint-staged": "15.2.10",
-        "prettier": "3.3.3",
-        "turbo": "1.13.4",
-        "typescript": "5.5.4"
+        "commitizen": "4.3.1",
+        "cz-customizable": "7.5.1",
+        "eslint": "9.39.1",
+        "eslint-config-prettier": "10.1.8",
+        "eslint-plugin-import": "2.32.0",
+        "eslint-plugin-prettier": "5.5.4",
+        "globals": "16.5.0",
+        "husky": "9.1.7",
+        "lint-staged": "16.2.6",
+        "prettier": "3.6.2",
+        "turbo": "2.6.1",
+        "typescript": "5.9.3",
+        "typescript-eslint": "8.46.4"
     }
 }

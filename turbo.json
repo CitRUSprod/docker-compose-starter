@@ -1,9 +1,11 @@
 {
     "$schema": "https://turbo.build/schema.json",
-    "pipeline": {
+    "ui": "tui",
+    "globalEnv": ["WSL_DISTRO_NAME"],
+    "tasks": {
         "build": {
             "dependsOn": ["^build"],
-            "outputs": ["dist/**"]
+            "outputs": [".svelte-kit/**", "dist/**"]
         },
         "check-types": {
             "dependsOn": ["^check-types"]

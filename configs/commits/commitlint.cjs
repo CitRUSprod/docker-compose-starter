@@ -1,4 +1,4 @@
-const { types, getScopes } = require("./base")
+const { types, getScopes } = require("./base.cjs")
 
 /** @type {import("@commitlint/types").UserConfig} */
 const config = {

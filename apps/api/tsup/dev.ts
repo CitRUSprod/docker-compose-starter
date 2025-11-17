@@ -1,7 +1,9 @@
-import path from "path"
-import { fileURLToPath } from "url"
-import { defineConfig } from "tsup"
+import path from "node:path"
+import { fileURLToPath } from "node:url"
+
 import defu from "defu"
+import { defineConfig } from "tsup"
+
 import baseConfig from "./base"
 
 const dirname = path.dirname(fileURLToPath(import.meta.url))
