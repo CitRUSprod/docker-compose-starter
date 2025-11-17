@@ -14,7 +14,8 @@
         "eslint:fix:all": "pnpm eslint:all --fix",
         "lint": "pnpm eslint:all",
         "format": "pnpm eslint:fix:all",
-        "validate": "pnpm check-types && pnpm lint",
+        "test:unit": "vitest --run",
+        "validate": "pnpm check-types && pnpm lint && pnpm test:unit",
         "prepare": "husky"
     },
     "packageManager": "pnpm@10.22.0",
@@ -53,6 +54,7 @@
         "prettier": "3.6.2",
         "turbo": "2.6.1",
         "typescript": "5.9.3",
-        "typescript-eslint": "8.46.4"
+        "typescript-eslint": "8.46.4",
+        "vitest": "4.0.10"
     }
 }
